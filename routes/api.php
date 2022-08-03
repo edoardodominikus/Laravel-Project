@@ -5,6 +5,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\PassportAuthController;
 use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\ProjectController;
+use App\Http\Controllers\Api\PageController;
+use App\Http\Controllers\Api\TopicController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -29,5 +32,8 @@ Route::middleware('auth:api')->group(function () {
     Route::get('get-user', [PassportAuthController::class, 'userInfo']);
     Route::resource('products', ProductController::class);
     Route::resource('projects', ProjectController::class);
+    Route::resource('pages', PageController::class);
+    Route::resource('topics', TopicController::class);
+
 
 });

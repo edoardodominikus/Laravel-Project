@@ -1,11 +1,11 @@
 <?php
 namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
-use App\Models\Project;
+use App\Models\Page;
 use Illuminate\Http\Request;
 use Validator;
 
-class ProjectController extends Controller
+class PageController extends Controller
 {
 /**
 * Display a listing of the resource.
@@ -14,11 +14,11 @@ class ProjectController extends Controller
 */
 public function index()
 {
-$projects = Project::all();
+$pages = Page::all();
 return response()->json([
 "success" => true,
-"message" => "Project List",
-"data" => $projects
+"message" => "Page List",
+"data" => $pages
 ]);
 }
 /**
@@ -31,16 +31,18 @@ public function store(Request $request)
 {
 $input = $request->all();
 $validator = Validator::make($input, [
-'name' => 'required',
+'project_id' => 'required',
+'page_title' => 'required',
+
 ]);
 if($validator->fails()){
 return $this->sendError('Validation Error.', $validator->errors());       
 }
-$project = Project::create($input);
+$page = Page::create($input);
 return response()->json([
 "success" => true,
-"message" => "Project created successfully.",
-"data" => $project
+"message" => "Page created successfully.",
+"data" => $page
 ]);
 } 
 /**
@@ -51,14 +53,14 @@ return response()->json([
 */
 public function show($id)
 {
-$project = Project::find($id);
-if (is_null($project)) {
-return $this->sendError('Project not found.');
+$page = Page::find($id);
+if (is_null($page)) {
+return $this->sendError('Page not found.');
 }
 return response()->json([
 "success" => true,
-"message" => "Project retrieved successfully.",
-"data" => $project
+"message" => "Page retrieved successfully.",
+"data" => $page
 ]);
 }
 /**
@@ -68,35 +70,27 @@ return response()->json([
 * @param  int  $id
 * @return \Illuminate\Http\Response
 */
-public function update(Request $request, Project $project)
+public function update(Request $request, Page $page)
 {
 $input = $request->all();
 $validator = Validator::make($input, [
+
 ]);
 if($validator->fails()){
 return $this->sendError('Validation Error.', $validator->errors());       
 }
-$project->name = $input['name'];
-$project->website = $input['website'];
-$project->email = $input['email'];
-$project->company_name = $input['company_name'];
-$project->address = $input['address'];
-$project->phone = $input['phone'];
-$project->social_media = $input['social_media'];
-$project->business_type = $input['business_type'];
-$project->products = $input['products'];
-$project->keywords = $input['keywords'];
-$project->competitors = $input['competitors'];
-$project->technical_tasks = $input['technical_tasks'];
-$project->topics = $input['topics'];
-$project->subtopics = $input['subtopics'];
-$project->active = $input['active'];
-$project->ordering = $input['ordering'];
-$project->save();
+$page->project_id = $input['project_id'];
+$page->url = $input['url'];
+$page->page_title = $input['page_title'];
+$page->keywords = $input['keywords'];
+$page->topics = $input['topics'];
+$page->notes = $input['notes'];
+$page->type = $input['type'];
+$page->save();
 return response()->json([
 "success" => true,
-"message" => "Project updated successfully.",
-"data" => $project
+"message" => "Page updated successfully.",
+"data" => $page
 ]);
 }
 /**
@@ -105,13 +99,13 @@ return response()->json([
 * @param  int  $id
 * @return \Illuminate\Http\Response
 */
-public function destroy(Project $project)
+public function destroy(Page $page)
 {
-$project->delete();
+$page->delete();
 return response()->json([
 "success" => true,
-"message" => "Project deleted successfully.",
-"data" => $project
+"message" => "Page deleted successfully.",
+"data" => $page
 ]);
 }
 }

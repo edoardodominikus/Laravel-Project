@@ -1,11 +1,11 @@
 <?php
 namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
-use App\Models\Project;
+use App\Models\Topic;
 use Illuminate\Http\Request;
 use Validator;
 
-class ProjectController extends Controller
+class TopicController extends Controller
 {
 /**
 * Display a listing of the resource.
@@ -14,11 +14,11 @@ class ProjectController extends Controller
 */
 public function index()
 {
-$projects = Project::all();
+$pages = Topic::all();
 return response()->json([
 "success" => true,
-"message" => "Project List",
-"data" => $projects
+"message" => "Topic List",
+"data" => $pages
 ]);
 }
 /**
@@ -31,16 +31,18 @@ public function store(Request $request)
 {
 $input = $request->all();
 $validator = Validator::make($input, [
+'project_id' => 'required',
 'name' => 'required',
+
 ]);
 if($validator->fails()){
 return $this->sendError('Validation Error.', $validator->errors());       
 }
-$project = Project::create($input);
+$page = Topic::create($input);
 return response()->json([
 "success" => true,
-"message" => "Project created successfully.",
-"data" => $project
+"message" => "Topic created successfully.",
+"data" => $page
 ]);
 } 
 /**
@@ -51,14 +53,14 @@ return response()->json([
 */
 public function show($id)
 {
-$project = Project::find($id);
-if (is_null($project)) {
-return $this->sendError('Project not found.');
+$page = Topic::find($id);
+if (is_null($page)) {
+return $this->sendError('Topic not found.');
 }
 return response()->json([
 "success" => true,
-"message" => "Project retrieved successfully.",
-"data" => $project
+"message" => "Topic retrieved successfully.",
+"data" => $page
 ]);
 }
 /**
@@ -68,35 +70,24 @@ return response()->json([
 * @param  int  $id
 * @return \Illuminate\Http\Response
 */
-public function update(Request $request, Project $project)
+public function update(Request $request, Topic $page)
 {
 $input = $request->all();
 $validator = Validator::make($input, [
+
 ]);
 if($validator->fails()){
 return $this->sendError('Validation Error.', $validator->errors());       
 }
-$project->name = $input['name'];
-$project->website = $input['website'];
-$project->email = $input['email'];
-$project->company_name = $input['company_name'];
-$project->address = $input['address'];
-$project->phone = $input['phone'];
-$project->social_media = $input['social_media'];
-$project->business_type = $input['business_type'];
-$project->products = $input['products'];
-$project->keywords = $input['keywords'];
-$project->competitors = $input['competitors'];
-$project->technical_tasks = $input['technical_tasks'];
-$project->topics = $input['topics'];
-$project->subtopics = $input['subtopics'];
-$project->active = $input['active'];
-$project->ordering = $input['ordering'];
-$project->save();
+$page->project_id = $input['project_id'];
+$page->name = $input['name'];
+$page->description = $input['description'];
+$page->active = $input['active'];
+$page->save();
 return response()->json([
 "success" => true,
-"message" => "Project updated successfully.",
-"data" => $project
+"message" => "Topic updated successfully.",
+"data" => $page
 ]);
 }
 /**
@@ -105,13 +96,13 @@ return response()->json([
 * @param  int  $id
 * @return \Illuminate\Http\Response
 */
-public function destroy(Project $project)
+public function destroy(Topic $page)
 {
-$project->delete();
+$page->delete();
 return response()->json([
 "success" => true,
-"message" => "Project deleted successfully.",
-"data" => $project
+"message" => "Topic deleted successfully.",
+"data" => $page
 ]);
 }
 }
