@@ -1,0 +1,654 @@
+{
+	"info": {
+		"_postman_id": "d327361f-4248-4654-bacd-e4a66184ec0e",
+		"name": "API CURD Laravel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19391115"
+	},
+	"item": [
+		{
+			"name": "GET projects",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiY2ExYmI1ZDE0M2E5ZWFjMzc3MTcyNGFkYjVjMmVmNzRjNjQ0OGJkMDNhMWNlZTJkOGVjZmRkNjdkN2UzMWEyY2FmYWRjOTY5NGE2YWY5ZTciLCJpYXQiOjE2NTk0MjYyODEuMDUwODI2LCJuYmYiOjE2NTk0MjYyODEuMDUwODI4LCJleHAiOjE2OTA5NjIyODEuMDQ4NDM3LCJzdWIiOiI0Iiwic2NvcGVzIjpbXX0.UCbF9_s5Z3LO_zq7UdP3ARNz80tMW4INuEuH22aUOjl7pA2I92Kccp-jGoVScPYiX5tsE6FBMO-tz214cKRJyo2JeSfQuvWeIKvaIj34QRnKq6UjqBRWGYTyKBYdYU8613Tq1mdYPHyp1PmLovOEmqZgJQjXECeeA1w7LiqReBKHJFfLZP7ckDaTsjcyppgcQWrqHfL08deA0glGbDd41dfzSkgcYHrV9iGDAFAdZoLteJOVwRI7AtlPQF3MVEsY13IQMiqQbcS6UFHopQGQqeXCKr5uEfk3EHCSy8QkkKauk8MFcerDslU_ZZCUqPiXzofgLj_Z9MBGscPTR83SLIhlV_IC5duiI1gykOSSiloqYh0DwbTlB5r9dvJglTBZpHjW57LQMsgVbR8Lk3fnmtOsO62CskzpdV5SGHxD4XFkCH70eXXwBvmzO7K98VtUpkTGl-55Ngtrb51XqDC2vUoh5TNqYJTiijuXH1fZIedYcV6dk8kYOrBLK-D6ab510C9B8IJ1jifehM6dwMiZ7N5WV61KI8VbwkV66QXnLOIfd4C1sihYrnm9Azt1xLgidpc44JO2YN2eg_uip77imEBgP4HzvUt6N92rjOGP18iVggXWI6U5uyZ7Ov2EkIXJejT8ylZgsx2ilQ2yO--nL5jxyi0JqgWO5fzRkAM6pkk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/projects",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"projects"
+					]
+				},
+				"description": "GET projects"
+			},
+			"response": []
+		},
+		{
+			"name": "POST projects",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiY2ExYmI1ZDE0M2E5ZWFjMzc3MTcyNGFkYjVjMmVmNzRjNjQ0OGJkMDNhMWNlZTJkOGVjZmRkNjdkN2UzMWEyY2FmYWRjOTY5NGE2YWY5ZTciLCJpYXQiOjE2NTk0MjYyODEuMDUwODI2LCJuYmYiOjE2NTk0MjYyODEuMDUwODI4LCJleHAiOjE2OTA5NjIyODEuMDQ4NDM3LCJzdWIiOiI0Iiwic2NvcGVzIjpbXX0.UCbF9_s5Z3LO_zq7UdP3ARNz80tMW4INuEuH22aUOjl7pA2I92Kccp-jGoVScPYiX5tsE6FBMO-tz214cKRJyo2JeSfQuvWeIKvaIj34QRnKq6UjqBRWGYTyKBYdYU8613Tq1mdYPHyp1PmLovOEmqZgJQjXECeeA1w7LiqReBKHJFfLZP7ckDaTsjcyppgcQWrqHfL08deA0glGbDd41dfzSkgcYHrV9iGDAFAdZoLteJOVwRI7AtlPQF3MVEsY13IQMiqQbcS6UFHopQGQqeXCKr5uEfk3EHCSy8QkkKauk8MFcerDslU_ZZCUqPiXzofgLj_Z9MBGscPTR83SLIhlV_IC5duiI1gykOSSiloqYh0DwbTlB5r9dvJglTBZpHjW57LQMsgVbR8Lk3fnmtOsO62CskzpdV5SGHxD4XFkCH70eXXwBvmzO7K98VtUpkTGl-55Ngtrb51XqDC2vUoh5TNqYJTiijuXH1fZIedYcV6dk8kYOrBLK-D6ab510C9B8IJ1jifehM6dwMiZ7N5WV61KI8VbwkV66QXnLOIfd4C1sihYrnm9Azt1xLgidpc44JO2YN2eg_uip77imEBgP4HzvUt6N92rjOGP18iVggXWI6U5uyZ7Ov2EkIXJejT8ylZgsx2ilQ2yO--nL5jxyi0JqgWO5fzRkAM6pkk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/projects?name=aqua.com&website=aqua.com&email=aqua@marketing.com&company_name=PT AQUA BANYAK AIR&address=Jl Sungai Air Gunung&phone=081234567&social_media=@aqua&business_type=Jualan Air&products=Air Botolan&keywords=Air&competitors=Water&technical_tasks=[{\\\"id\\\":\\\"1\\\",\\\"name\\\":\\\"Google Analytics and Google Tag Manager\\\",\\\"dt\\\":\\\"2020-08-30 12:44:02\\\"},{\\\"id\\\":\\\"2\\\",\\\"name\\\":\\\"Google Webmaster\\\",\\\"dt\\\":\\\"2020-08-30 12:44:02\\\"},{\\\"id\\\":\\\"3\\\",\\\"name\\\":\\\"Submit Sitemap to Google Webmaster\\\",\\\"dt\\\":\\\"2020-08-30 12:44:02\\\"},{\\\"id\\\":\\\"4\\\",\\\"name\\\":\\\"Robots.txt\\\",\\\"dt\\\":\\\"2020-08-30 12:44:02\\\"},{\\\"id\\\":\\\"5\\\",\\\"name\\\":\\\"SSL HTTPS One Page\\\",\\\"dt\\\":\\\"2020-08-30 12:44:02\\\"},{\\\"id\\\":\\\"6\\\",\\\"name\\\":\\\"WWW and NON WWW One Page\\\",\\\"dt\\\":\\\"2020-08-30 12:44:02\\\"},{\\\"id\\\":\\\"7\\\",\\\"name\\\":\\\"Turn on GZIP\\\",\\\"dt\\\":\\\"2020-08-30 12:44:02\\\"},{\\\"id\\\":\\\"8\\\",\\\"name\\\":\\\"Setup SEO Tools\\\",\\\"dt\\\":\\\"2020-08-30 12:44:02\\\"},{\\\"id\\\":\\\"9\\\",\\\"name\\\":\\\"Setup Google Analytics Goals\\\",\\\"dt\\\":\\\"2020-08-30 12:44:02\\\"},{\\\"id\\\":\\\"18\\\",\\\"name\\\":\\\"Link Google Analytics and Google Ads\\\",\\\"dt\\\":\\\"2021-11-14 06:50:38\\\"},{\\\"id\\\":\\\"19\\\",\\\"name\\\":\\\"Setup Google Ads Tag Conversion\\\",\\\"dt\\\":\\\"2021-11-14 06:50:38\\\"},{\\\"id\\\":\\\"20\\\",\\\"name\\\":\\\"Tambah Uptime Robot untuk melakukan monitoring\\\",\\\"dt\\\":\\\"2021-11-14 06:50:38\\\"},{\\\"id\\\":\\\"21\\\",\\\"name\\\":\\\"Sitemap Page\\\",\\\"dt\\\":\\\"2021-11-14 06:50:48\\\"},{\\\"id\\\":\\\"22\\\",\\\"name\\\":\\\"Discover Competitor Keywords\\\",\\\"dt\\\":\\\"2021-11-14 06:50:50\\\"},{\\\"id\\\":\\\"23\\\",\\\"name\\\":\\\"Image Sitemap\\\",\\\"dt\\\":\\\"2021-11-14 06:50:51\\\"},{\\\"id\\\":\\\"24\\\",\\\"name\\\":\\\"Valid XHTML\\\",\\\"dt\\\":\\\"2021-11-14 06:50:52\\\"},{\\\"id\\\":\\\"25\\\",\\\"name\\\":\\\"Access to Google My Business\\\",\\\"dt\\\":\\\"2021-11-14 06:50:53\\\"},{\\\"id\\\":\\\"26\\\",\\\"name\\\":\\\"Tambah ke Data Studio Monitoring Page\\\",\\\"dt\\\":\\\"2021-11-14 06:50:56\\\"},{\\\"id\\\":\\\"27\\\",\\\"name\\\":\\\"Wordpress - Activate WP Rocket\\\",\\\"dt\\\":\\\"2021-11-14 06:50:57\\\"},{\\\"id\\\":\\\"28\\\",\\\"name\\\":\\\"Wordpress - Activate Imagify\\\",\\\"dt\\\":\\\"2021-11-14 06:50:58\\\"},{\\\"id\\\":\\\"17\\\",\\\"name\\\":\\\"Page Title and Meta Description Page Assignments\\\",\\\"dt\\\":\\\"2021-11-14 06:51:01\\\"},{\\\"id\\\":\\\"12\\\",\\\"name\\\":\\\"Google Page Speed Optimization\\\",\\\"dt\\\":\\\"2021-11-14 06:51:08\\\"},{\\\"id\\\":\\\"13\\\",\\\"name\\\":\\\"Setup On Page Monitoring for Major Landing Pages\\\",\\\"dt\\\":\\\"2021-11-14 06:51:08\\\"},{\\\"id\\\":\\\"14\\\",\\\"name\\\":\\\"Rich Snippets for Products \\\\/ Breadcrumbs \\\\/ Articles \\\\/ Logo\\\",\\\"dt\\\":\\\"2021-11-14 06:51:08\\\"},{\\\"id\\\":\\\"15\\\",\\\"name\\\":\\\"Discover Low Hanging Fruits (Between 10 to 20 with more than 10 impressions)\\\",\\\"dt\\\":\\\"2021-11-14 06:51:08\\\"},{\\\"id\\\":\\\"16\\\",\\\"name\\\":\\\"Setup AMP Pages\\\",\\\"dt\\\":\\\"2021-11-14 06:51:08\\\"}]&topics=Air&subtopics=Air&active=1&ordering=12",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"projects"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "aqua.com"
+						},
+						{
+							"key": "website",
+							"value": "aqua.com"
+						},
+						{
+							"key": "email",
+							"value": "aqua@marketing.com"
+						},
+						{
+							"key": "company_name",
+							"value": "PT AQUA BANYAK AIR"
+						},
+						{
+							"key": "address",
+							"value": "Jl Sungai Air Gunung"
+						},
+						{
+							"key": "phone",
+							"value": "081234567"
+						},
+						{
+							"key": "social_media",
+							"value": "@aqua"
+						},
+						{
+							"key": "business_type",
+							"value": "Jualan Air"
+						},
+						{
+							"key": "products",
+							"value": "Air Botolan"
+						},
+						{
+							"key": "keywords",
+							"value": "Air"
+						},
+						{
+							"key": "competitors",
+							"value": "Water"
+						},
+						{
+							"key": "technical_tasks",
+							"value": "[{\\\"id\\\":\\\"1\\\",\\\"name\\\":\\\"Google Analytics and Google Tag Manager\\\",\\\"dt\\\":\\\"2020-08-30 12:44:02\\\"},{\\\"id\\\":\\\"2\\\",\\\"name\\\":\\\"Google Webmaster\\\",\\\"dt\\\":\\\"2020-08-30 12:44:02\\\"},{\\\"id\\\":\\\"3\\\",\\\"name\\\":\\\"Submit Sitemap to Google Webmaster\\\",\\\"dt\\\":\\\"2020-08-30 12:44:02\\\"},{\\\"id\\\":\\\"4\\\",\\\"name\\\":\\\"Robots.txt\\\",\\\"dt\\\":\\\"2020-08-30 12:44:02\\\"},{\\\"id\\\":\\\"5\\\",\\\"name\\\":\\\"SSL HTTPS One Page\\\",\\\"dt\\\":\\\"2020-08-30 12:44:02\\\"},{\\\"id\\\":\\\"6\\\",\\\"name\\\":\\\"WWW and NON WWW One Page\\\",\\\"dt\\\":\\\"2020-08-30 12:44:02\\\"},{\\\"id\\\":\\\"7\\\",\\\"name\\\":\\\"Turn on GZIP\\\",\\\"dt\\\":\\\"2020-08-30 12:44:02\\\"},{\\\"id\\\":\\\"8\\\",\\\"name\\\":\\\"Setup SEO Tools\\\",\\\"dt\\\":\\\"2020-08-30 12:44:02\\\"},{\\\"id\\\":\\\"9\\\",\\\"name\\\":\\\"Setup Google Analytics Goals\\\",\\\"dt\\\":\\\"2020-08-30 12:44:02\\\"},{\\\"id\\\":\\\"18\\\",\\\"name\\\":\\\"Link Google Analytics and Google Ads\\\",\\\"dt\\\":\\\"2021-11-14 06:50:38\\\"},{\\\"id\\\":\\\"19\\\",\\\"name\\\":\\\"Setup Google Ads Tag Conversion\\\",\\\"dt\\\":\\\"2021-11-14 06:50:38\\\"},{\\\"id\\\":\\\"20\\\",\\\"name\\\":\\\"Tambah Uptime Robot untuk melakukan monitoring\\\",\\\"dt\\\":\\\"2021-11-14 06:50:38\\\"},{\\\"id\\\":\\\"21\\\",\\\"name\\\":\\\"Sitemap Page\\\",\\\"dt\\\":\\\"2021-11-14 06:50:48\\\"},{\\\"id\\\":\\\"22\\\",\\\"name\\\":\\\"Discover Competitor Keywords\\\",\\\"dt\\\":\\\"2021-11-14 06:50:50\\\"},{\\\"id\\\":\\\"23\\\",\\\"name\\\":\\\"Image Sitemap\\\",\\\"dt\\\":\\\"2021-11-14 06:50:51\\\"},{\\\"id\\\":\\\"24\\\",\\\"name\\\":\\\"Valid XHTML\\\",\\\"dt\\\":\\\"2021-11-14 06:50:52\\\"},{\\\"id\\\":\\\"25\\\",\\\"name\\\":\\\"Access to Google My Business\\\",\\\"dt\\\":\\\"2021-11-14 06:50:53\\\"},{\\\"id\\\":\\\"26\\\",\\\"name\\\":\\\"Tambah ke Data Studio Monitoring Page\\\",\\\"dt\\\":\\\"2021-11-14 06:50:56\\\"},{\\\"id\\\":\\\"27\\\",\\\"name\\\":\\\"Wordpress - Activate WP Rocket\\\",\\\"dt\\\":\\\"2021-11-14 06:50:57\\\"},{\\\"id\\\":\\\"28\\\",\\\"name\\\":\\\"Wordpress - Activate Imagify\\\",\\\"dt\\\":\\\"2021-11-14 06:50:58\\\"},{\\\"id\\\":\\\"17\\\",\\\"name\\\":\\\"Page Title and Meta Description Page Assignments\\\",\\\"dt\\\":\\\"2021-11-14 06:51:01\\\"},{\\\"id\\\":\\\"12\\\",\\\"name\\\":\\\"Google Page Speed Optimization\\\",\\\"dt\\\":\\\"2021-11-14 06:51:08\\\"},{\\\"id\\\":\\\"13\\\",\\\"name\\\":\\\"Setup On Page Monitoring for Major Landing Pages\\\",\\\"dt\\\":\\\"2021-11-14 06:51:08\\\"},{\\\"id\\\":\\\"14\\\",\\\"name\\\":\\\"Rich Snippets for Products \\\\/ Breadcrumbs \\\\/ Articles \\\\/ Logo\\\",\\\"dt\\\":\\\"2021-11-14 06:51:08\\\"},{\\\"id\\\":\\\"15\\\",\\\"name\\\":\\\"Discover Low Hanging Fruits (Between 10 to 20 with more than 10 impressions)\\\",\\\"dt\\\":\\\"2021-11-14 06:51:08\\\"},{\\\"id\\\":\\\"16\\\",\\\"name\\\":\\\"Setup AMP Pages\\\",\\\"dt\\\":\\\"2021-11-14 06:51:08\\\"}]"
+						},
+						{
+							"key": "topics",
+							"value": "Air"
+						},
+						{
+							"key": "subtopics",
+							"value": "Air"
+						},
+						{
+							"key": "active",
+							"value": "1"
+						},
+						{
+							"key": "ordering",
+							"value": "12"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT projects",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiY2ExYmI1ZDE0M2E5ZWFjMzc3MTcyNGFkYjVjMmVmNzRjNjQ0OGJkMDNhMWNlZTJkOGVjZmRkNjdkN2UzMWEyY2FmYWRjOTY5NGE2YWY5ZTciLCJpYXQiOjE2NTk0MjYyODEuMDUwODI2LCJuYmYiOjE2NTk0MjYyODEuMDUwODI4LCJleHAiOjE2OTA5NjIyODEuMDQ4NDM3LCJzdWIiOiI0Iiwic2NvcGVzIjpbXX0.UCbF9_s5Z3LO_zq7UdP3ARNz80tMW4INuEuH22aUOjl7pA2I92Kccp-jGoVScPYiX5tsE6FBMO-tz214cKRJyo2JeSfQuvWeIKvaIj34QRnKq6UjqBRWGYTyKBYdYU8613Tq1mdYPHyp1PmLovOEmqZgJQjXECeeA1w7LiqReBKHJFfLZP7ckDaTsjcyppgcQWrqHfL08deA0glGbDd41dfzSkgcYHrV9iGDAFAdZoLteJOVwRI7AtlPQF3MVEsY13IQMiqQbcS6UFHopQGQqeXCKr5uEfk3EHCSy8QkkKauk8MFcerDslU_ZZCUqPiXzofgLj_Z9MBGscPTR83SLIhlV_IC5duiI1gykOSSiloqYh0DwbTlB5r9dvJglTBZpHjW57LQMsgVbR8Lk3fnmtOsO62CskzpdV5SGHxD4XFkCH70eXXwBvmzO7K98VtUpkTGl-55Ngtrb51XqDC2vUoh5TNqYJTiijuXH1fZIedYcV6dk8kYOrBLK-D6ab510C9B8IJ1jifehM6dwMiZ7N5WV61KI8VbwkV66QXnLOIfd4C1sihYrnm9Azt1xLgidpc44JO2YN2eg_uip77imEBgP4HzvUt6N92rjOGP18iVggXWI6U5uyZ7Ov2EkIXJejT8ylZgsx2ilQ2yO--nL5jxyi0JqgWO5fzRkAM6pkk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/projects/27?name=aqua.com&website=aqua.com&email=aqua@marketing.com&company_name=PT AQUA BANYAK AIR&address=Jl Sungai Air Gunung&phone=081234567&social_media=@aqua&business_type=Jualan Air&products=Air Botolan, Air Galon, Air Gelas&keywords=Air&competitors=Water&technical_tasks=[{\\\"id\\\":\\\"1\\\",\\\"name\\\":\\\"Google Analytics and Google Tag Manager\\\",\\\"dt\\\":\\\"2020-08-30 12:44:02\\\"},{\\\"id\\\":\\\"2\\\",\\\"name\\\":\\\"Google Webmaster\\\",\\\"dt\\\":\\\"2020-08-30 12:44:02\\\"},{\\\"id\\\":\\\"3\\\",\\\"name\\\":\\\"Submit Sitemap to Google Webmaster\\\",\\\"dt\\\":\\\"2020-08-30 12:44:02\\\"},{\\\"id\\\":\\\"4\\\",\\\"name\\\":\\\"Robots.txt\\\",\\\"dt\\\":\\\"2020-08-30 12:44:02\\\"},{\\\"id\\\":\\\"5\\\",\\\"name\\\":\\\"SSL HTTPS One Page\\\",\\\"dt\\\":\\\"2020-08-30 12:44:02\\\"},{\\\"id\\\":\\\"6\\\",\\\"name\\\":\\\"WWW and NON WWW One Page\\\",\\\"dt\\\":\\\"2020-08-30 12:44:02\\\"},{\\\"id\\\":\\\"7\\\",\\\"name\\\":\\\"Turn on GZIP\\\",\\\"dt\\\":\\\"2020-08-30 12:44:02\\\"},{\\\"id\\\":\\\"8\\\",\\\"name\\\":\\\"Setup SEO Tools\\\",\\\"dt\\\":\\\"2020-08-30 12:44:02\\\"},{\\\"id\\\":\\\"9\\\",\\\"name\\\":\\\"Setup Google Analytics Goals\\\",\\\"dt\\\":\\\"2020-08-30 12:44:02\\\"},{\\\"id\\\":\\\"18\\\",\\\"name\\\":\\\"Link Google Analytics and Google Ads\\\",\\\"dt\\\":\\\"2021-11-14 06:50:38\\\"},{\\\"id\\\":\\\"19\\\",\\\"name\\\":\\\"Setup Google Ads Tag Conversion\\\",\\\"dt\\\":\\\"2021-11-14 06:50:38\\\"},{\\\"id\\\":\\\"20\\\",\\\"name\\\":\\\"Tambah Uptime Robot untuk melakukan monitoring\\\",\\\"dt\\\":\\\"2021-11-14 06:50:38\\\"},{\\\"id\\\":\\\"21\\\",\\\"name\\\":\\\"Sitemap Page\\\",\\\"dt\\\":\\\"2021-11-14 06:50:48\\\"},{\\\"id\\\":\\\"22\\\",\\\"name\\\":\\\"Discover Competitor Keywords\\\",\\\"dt\\\":\\\"2021-11-14 06:50:50\\\"},{\\\"id\\\":\\\"23\\\",\\\"name\\\":\\\"Image Sitemap\\\",\\\"dt\\\":\\\"2021-11-14 06:50:51\\\"},{\\\"id\\\":\\\"24\\\",\\\"name\\\":\\\"Valid XHTML\\\",\\\"dt\\\":\\\"2021-11-14 06:50:52\\\"},{\\\"id\\\":\\\"25\\\",\\\"name\\\":\\\"Access to Google My Business\\\",\\\"dt\\\":\\\"2021-11-14 06:50:53\\\"},{\\\"id\\\":\\\"26\\\",\\\"name\\\":\\\"Tambah ke Data Studio Monitoring Page\\\",\\\"dt\\\":\\\"2021-11-14 06:50:56\\\"},{\\\"id\\\":\\\"27\\\",\\\"name\\\":\\\"Wordpress - Activate WP Rocket\\\",\\\"dt\\\":\\\"2021-11-14 06:50:57\\\"},{\\\"id\\\":\\\"28\\\",\\\"name\\\":\\\"Wordpress - Activate Imagify\\\",\\\"dt\\\":\\\"2021-11-14 06:50:58\\\"},{\\\"id\\\":\\\"17\\\",\\\"name\\\":\\\"Page Title and Meta Description Page Assignments\\\",\\\"dt\\\":\\\"2021-11-14 06:51:01\\\"},{\\\"id\\\":\\\"12\\\",\\\"name\\\":\\\"Google Page Speed Optimization\\\",\\\"dt\\\":\\\"2021-11-14 06:51:08\\\"},{\\\"id\\\":\\\"13\\\",\\\"name\\\":\\\"Setup On Page Monitoring for Major Landing Pages\\\",\\\"dt\\\":\\\"2021-11-14 06:51:08\\\"},{\\\"id\\\":\\\"14\\\",\\\"name\\\":\\\"Rich Snippets for Products \\\\/ Breadcrumbs \\\\/ Articles \\\\/ Logo\\\",\\\"dt\\\":\\\"2021-11-14 06:51:08\\\"},{\\\"id\\\":\\\"15\\\",\\\"name\\\":\\\"Discover Low Hanging Fruits (Between 10 to 20 with more than 10 impressions)\\\",\\\"dt\\\":\\\"2021-11-14 06:51:08\\\"},{\\\"id\\\":\\\"16\\\",\\\"name\\\":\\\"Setup AMP Pages\\\",\\\"dt\\\":\\\"2021-11-14 06:51:08\\\"}]&topics=Air&subtopics=Air&active=1&ordering=12",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"projects",
+						"27"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "aqua.com"
+						},
+						{
+							"key": "website",
+							"value": "aqua.com"
+						},
+						{
+							"key": "email",
+							"value": "aqua@marketing.com"
+						},
+						{
+							"key": "company_name",
+							"value": "PT AQUA BANYAK AIR"
+						},
+						{
+							"key": "address",
+							"value": "Jl Sungai Air Gunung"
+						},
+						{
+							"key": "phone",
+							"value": "081234567"
+						},
+						{
+							"key": "social_media",
+							"value": "@aqua"
+						},
+						{
+							"key": "business_type",
+							"value": "Jualan Air"
+						},
+						{
+							"key": "products",
+							"value": "Air Botolan, Air Galon, Air Gelas"
+						},
+						{
+							"key": "keywords",
+							"value": "Air"
+						},
+						{
+							"key": "competitors",
+							"value": "Water"
+						},
+						{
+							"key": "technical_tasks",
+							"value": "[{\\\"id\\\":\\\"1\\\",\\\"name\\\":\\\"Google Analytics and Google Tag Manager\\\",\\\"dt\\\":\\\"2020-08-30 12:44:02\\\"},{\\\"id\\\":\\\"2\\\",\\\"name\\\":\\\"Google Webmaster\\\",\\\"dt\\\":\\\"2020-08-30 12:44:02\\\"},{\\\"id\\\":\\\"3\\\",\\\"name\\\":\\\"Submit Sitemap to Google Webmaster\\\",\\\"dt\\\":\\\"2020-08-30 12:44:02\\\"},{\\\"id\\\":\\\"4\\\",\\\"name\\\":\\\"Robots.txt\\\",\\\"dt\\\":\\\"2020-08-30 12:44:02\\\"},{\\\"id\\\":\\\"5\\\",\\\"name\\\":\\\"SSL HTTPS One Page\\\",\\\"dt\\\":\\\"2020-08-30 12:44:02\\\"},{\\\"id\\\":\\\"6\\\",\\\"name\\\":\\\"WWW and NON WWW One Page\\\",\\\"dt\\\":\\\"2020-08-30 12:44:02\\\"},{\\\"id\\\":\\\"7\\\",\\\"name\\\":\\\"Turn on GZIP\\\",\\\"dt\\\":\\\"2020-08-30 12:44:02\\\"},{\\\"id\\\":\\\"8\\\",\\\"name\\\":\\\"Setup SEO Tools\\\",\\\"dt\\\":\\\"2020-08-30 12:44:02\\\"},{\\\"id\\\":\\\"9\\\",\\\"name\\\":\\\"Setup Google Analytics Goals\\\",\\\"dt\\\":\\\"2020-08-30 12:44:02\\\"},{\\\"id\\\":\\\"18\\\",\\\"name\\\":\\\"Link Google Analytics and Google Ads\\\",\\\"dt\\\":\\\"2021-11-14 06:50:38\\\"},{\\\"id\\\":\\\"19\\\",\\\"name\\\":\\\"Setup Google Ads Tag Conversion\\\",\\\"dt\\\":\\\"2021-11-14 06:50:38\\\"},{\\\"id\\\":\\\"20\\\",\\\"name\\\":\\\"Tambah Uptime Robot untuk melakukan monitoring\\\",\\\"dt\\\":\\\"2021-11-14 06:50:38\\\"},{\\\"id\\\":\\\"21\\\",\\\"name\\\":\\\"Sitemap Page\\\",\\\"dt\\\":\\\"2021-11-14 06:50:48\\\"},{\\\"id\\\":\\\"22\\\",\\\"name\\\":\\\"Discover Competitor Keywords\\\",\\\"dt\\\":\\\"2021-11-14 06:50:50\\\"},{\\\"id\\\":\\\"23\\\",\\\"name\\\":\\\"Image Sitemap\\\",\\\"dt\\\":\\\"2021-11-14 06:50:51\\\"},{\\\"id\\\":\\\"24\\\",\\\"name\\\":\\\"Valid XHTML\\\",\\\"dt\\\":\\\"2021-11-14 06:50:52\\\"},{\\\"id\\\":\\\"25\\\",\\\"name\\\":\\\"Access to Google My Business\\\",\\\"dt\\\":\\\"2021-11-14 06:50:53\\\"},{\\\"id\\\":\\\"26\\\",\\\"name\\\":\\\"Tambah ke Data Studio Monitoring Page\\\",\\\"dt\\\":\\\"2021-11-14 06:50:56\\\"},{\\\"id\\\":\\\"27\\\",\\\"name\\\":\\\"Wordpress - Activate WP Rocket\\\",\\\"dt\\\":\\\"2021-11-14 06:50:57\\\"},{\\\"id\\\":\\\"28\\\",\\\"name\\\":\\\"Wordpress - Activate Imagify\\\",\\\"dt\\\":\\\"2021-11-14 06:50:58\\\"},{\\\"id\\\":\\\"17\\\",\\\"name\\\":\\\"Page Title and Meta Description Page Assignments\\\",\\\"dt\\\":\\\"2021-11-14 06:51:01\\\"},{\\\"id\\\":\\\"12\\\",\\\"name\\\":\\\"Google Page Speed Optimization\\\",\\\"dt\\\":\\\"2021-11-14 06:51:08\\\"},{\\\"id\\\":\\\"13\\\",\\\"name\\\":\\\"Setup On Page Monitoring for Major Landing Pages\\\",\\\"dt\\\":\\\"2021-11-14 06:51:08\\\"},{\\\"id\\\":\\\"14\\\",\\\"name\\\":\\\"Rich Snippets for Products \\\\/ Breadcrumbs \\\\/ Articles \\\\/ Logo\\\",\\\"dt\\\":\\\"2021-11-14 06:51:08\\\"},{\\\"id\\\":\\\"15\\\",\\\"name\\\":\\\"Discover Low Hanging Fruits (Between 10 to 20 with more than 10 impressions)\\\",\\\"dt\\\":\\\"2021-11-14 06:51:08\\\"},{\\\"id\\\":\\\"16\\\",\\\"name\\\":\\\"Setup AMP Pages\\\",\\\"dt\\\":\\\"2021-11-14 06:51:08\\\"}]"
+						},
+						{
+							"key": "topics",
+							"value": "Air"
+						},
+						{
+							"key": "subtopics",
+							"value": "Air"
+						},
+						{
+							"key": "active",
+							"value": "1"
+						},
+						{
+							"key": "ordering",
+							"value": "12"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DEL projects",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiY2ExYmI1ZDE0M2E5ZWFjMzc3MTcyNGFkYjVjMmVmNzRjNjQ0OGJkMDNhMWNlZTJkOGVjZmRkNjdkN2UzMWEyY2FmYWRjOTY5NGE2YWY5ZTciLCJpYXQiOjE2NTk0MjYyODEuMDUwODI2LCJuYmYiOjE2NTk0MjYyODEuMDUwODI4LCJleHAiOjE2OTA5NjIyODEuMDQ4NDM3LCJzdWIiOiI0Iiwic2NvcGVzIjpbXX0.UCbF9_s5Z3LO_zq7UdP3ARNz80tMW4INuEuH22aUOjl7pA2I92Kccp-jGoVScPYiX5tsE6FBMO-tz214cKRJyo2JeSfQuvWeIKvaIj34QRnKq6UjqBRWGYTyKBYdYU8613Tq1mdYPHyp1PmLovOEmqZgJQjXECeeA1w7LiqReBKHJFfLZP7ckDaTsjcyppgcQWrqHfL08deA0glGbDd41dfzSkgcYHrV9iGDAFAdZoLteJOVwRI7AtlPQF3MVEsY13IQMiqQbcS6UFHopQGQqeXCKr5uEfk3EHCSy8QkkKauk8MFcerDslU_ZZCUqPiXzofgLj_Z9MBGscPTR83SLIhlV_IC5duiI1gykOSSiloqYh0DwbTlB5r9dvJglTBZpHjW57LQMsgVbR8Lk3fnmtOsO62CskzpdV5SGHxD4XFkCH70eXXwBvmzO7K98VtUpkTGl-55Ngtrb51XqDC2vUoh5TNqYJTiijuXH1fZIedYcV6dk8kYOrBLK-D6ab510C9B8IJ1jifehM6dwMiZ7N5WV61KI8VbwkV66QXnLOIfd4C1sihYrnm9Azt1xLgidpc44JO2YN2eg_uip77imEBgP4HzvUt6N92rjOGP18iVggXWI6U5uyZ7Ov2EkIXJejT8ylZgsx2ilQ2yO--nL5jxyi0JqgWO5fzRkAM6pkk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/projects/26",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"projects",
+						"26"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET pages",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiY2ExYmI1ZDE0M2E5ZWFjMzc3MTcyNGFkYjVjMmVmNzRjNjQ0OGJkMDNhMWNlZTJkOGVjZmRkNjdkN2UzMWEyY2FmYWRjOTY5NGE2YWY5ZTciLCJpYXQiOjE2NTk0MjYyODEuMDUwODI2LCJuYmYiOjE2NTk0MjYyODEuMDUwODI4LCJleHAiOjE2OTA5NjIyODEuMDQ4NDM3LCJzdWIiOiI0Iiwic2NvcGVzIjpbXX0.UCbF9_s5Z3LO_zq7UdP3ARNz80tMW4INuEuH22aUOjl7pA2I92Kccp-jGoVScPYiX5tsE6FBMO-tz214cKRJyo2JeSfQuvWeIKvaIj34QRnKq6UjqBRWGYTyKBYdYU8613Tq1mdYPHyp1PmLovOEmqZgJQjXECeeA1w7LiqReBKHJFfLZP7ckDaTsjcyppgcQWrqHfL08deA0glGbDd41dfzSkgcYHrV9iGDAFAdZoLteJOVwRI7AtlPQF3MVEsY13IQMiqQbcS6UFHopQGQqeXCKr5uEfk3EHCSy8QkkKauk8MFcerDslU_ZZCUqPiXzofgLj_Z9MBGscPTR83SLIhlV_IC5duiI1gykOSSiloqYh0DwbTlB5r9dvJglTBZpHjW57LQMsgVbR8Lk3fnmtOsO62CskzpdV5SGHxD4XFkCH70eXXwBvmzO7K98VtUpkTGl-55Ngtrb51XqDC2vUoh5TNqYJTiijuXH1fZIedYcV6dk8kYOrBLK-D6ab510C9B8IJ1jifehM6dwMiZ7N5WV61KI8VbwkV66QXnLOIfd4C1sihYrnm9Azt1xLgidpc44JO2YN2eg_uip77imEBgP4HzvUt6N92rjOGP18iVggXWI6U5uyZ7Ov2EkIXJejT8ylZgsx2ilQ2yO--nL5jxyi0JqgWO5fzRkAM6pkk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pages",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST pages",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiY2ExYmI1ZDE0M2E5ZWFjMzc3MTcyNGFkYjVjMmVmNzRjNjQ0OGJkMDNhMWNlZTJkOGVjZmRkNjdkN2UzMWEyY2FmYWRjOTY5NGE2YWY5ZTciLCJpYXQiOjE2NTk0MjYyODEuMDUwODI2LCJuYmYiOjE2NTk0MjYyODEuMDUwODI4LCJleHAiOjE2OTA5NjIyODEuMDQ4NDM3LCJzdWIiOiI0Iiwic2NvcGVzIjpbXX0.UCbF9_s5Z3LO_zq7UdP3ARNz80tMW4INuEuH22aUOjl7pA2I92Kccp-jGoVScPYiX5tsE6FBMO-tz214cKRJyo2JeSfQuvWeIKvaIj34QRnKq6UjqBRWGYTyKBYdYU8613Tq1mdYPHyp1PmLovOEmqZgJQjXECeeA1w7LiqReBKHJFfLZP7ckDaTsjcyppgcQWrqHfL08deA0glGbDd41dfzSkgcYHrV9iGDAFAdZoLteJOVwRI7AtlPQF3MVEsY13IQMiqQbcS6UFHopQGQqeXCKr5uEfk3EHCSy8QkkKauk8MFcerDslU_ZZCUqPiXzofgLj_Z9MBGscPTR83SLIhlV_IC5duiI1gykOSSiloqYh0DwbTlB5r9dvJglTBZpHjW57LQMsgVbR8Lk3fnmtOsO62CskzpdV5SGHxD4XFkCH70eXXwBvmzO7K98VtUpkTGl-55Ngtrb51XqDC2vUoh5TNqYJTiijuXH1fZIedYcV6dk8kYOrBLK-D6ab510C9B8IJ1jifehM6dwMiZ7N5WV61KI8VbwkV66QXnLOIfd4C1sihYrnm9Azt1xLgidpc44JO2YN2eg_uip77imEBgP4HzvUt6N92rjOGP18iVggXWI6U5uyZ7Ov2EkIXJejT8ylZgsx2ilQ2yO--nL5jxyi0JqgWO5fzRkAM6pkk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pages?project_id=2&url=https://misel.co.id/?p=1955%26preview=true&page_title=Cara Untuk Memulai di Industri&keywords=Industri&topics=Industri Rumah&type=article&notes=aaaa",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pages"
+					],
+					"query": [
+						{
+							"key": "project_id",
+							"value": "2"
+						},
+						{
+							"key": "url",
+							"value": "https://misel.co.id/?p=1955&preview=true"
+						},
+						{
+							"key": "page_title",
+							"value": "Cara Untuk Memulai di Industri"
+						},
+						{
+							"key": "keywords",
+							"value": "Industri"
+						},
+						{
+							"key": "topics",
+							"value": "Industri Rumah"
+						},
+						{
+							"key": "type",
+							"value": "article"
+						},
+						{
+							"key": "notes",
+							"value": "aaaa"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT pages",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiY2ExYmI1ZDE0M2E5ZWFjMzc3MTcyNGFkYjVjMmVmNzRjNjQ0OGJkMDNhMWNlZTJkOGVjZmRkNjdkN2UzMWEyY2FmYWRjOTY5NGE2YWY5ZTciLCJpYXQiOjE2NTk0MjYyODEuMDUwODI2LCJuYmYiOjE2NTk0MjYyODEuMDUwODI4LCJleHAiOjE2OTA5NjIyODEuMDQ4NDM3LCJzdWIiOiI0Iiwic2NvcGVzIjpbXX0.UCbF9_s5Z3LO_zq7UdP3ARNz80tMW4INuEuH22aUOjl7pA2I92Kccp-jGoVScPYiX5tsE6FBMO-tz214cKRJyo2JeSfQuvWeIKvaIj34QRnKq6UjqBRWGYTyKBYdYU8613Tq1mdYPHyp1PmLovOEmqZgJQjXECeeA1w7LiqReBKHJFfLZP7ckDaTsjcyppgcQWrqHfL08deA0glGbDd41dfzSkgcYHrV9iGDAFAdZoLteJOVwRI7AtlPQF3MVEsY13IQMiqQbcS6UFHopQGQqeXCKr5uEfk3EHCSy8QkkKauk8MFcerDslU_ZZCUqPiXzofgLj_Z9MBGscPTR83SLIhlV_IC5duiI1gykOSSiloqYh0DwbTlB5r9dvJglTBZpHjW57LQMsgVbR8Lk3fnmtOsO62CskzpdV5SGHxD4XFkCH70eXXwBvmzO7K98VtUpkTGl-55Ngtrb51XqDC2vUoh5TNqYJTiijuXH1fZIedYcV6dk8kYOrBLK-D6ab510C9B8IJ1jifehM6dwMiZ7N5WV61KI8VbwkV66QXnLOIfd4C1sihYrnm9Azt1xLgidpc44JO2YN2eg_uip77imEBgP4HzvUt6N92rjOGP18iVggXWI6U5uyZ7Ov2EkIXJejT8ylZgsx2ilQ2yO--nL5jxyi0JqgWO5fzRkAM6pkk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pages/47?project_id=2&url=https://misel.co.id/?p=1955%26preview=true&page_title=Cara Untuk Memulai di Industri&keywords=Industri&topics=Industri Rumah, Industri Mesin&type=article&notes=aaaa",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pages",
+						"47"
+					],
+					"query": [
+						{
+							"key": "project_id",
+							"value": "2"
+						},
+						{
+							"key": "url",
+							"value": "https://misel.co.id/?p=1955%26preview=true"
+						},
+						{
+							"key": "page_title",
+							"value": "Cara Untuk Memulai di Industri"
+						},
+						{
+							"key": "keywords",
+							"value": "Industri"
+						},
+						{
+							"key": "topics",
+							"value": "Industri Rumah, Industri Mesin"
+						},
+						{
+							"key": "type",
+							"value": "article"
+						},
+						{
+							"key": "notes",
+							"value": "aaaa"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DEL pages",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiY2ExYmI1ZDE0M2E5ZWFjMzc3MTcyNGFkYjVjMmVmNzRjNjQ0OGJkMDNhMWNlZTJkOGVjZmRkNjdkN2UzMWEyY2FmYWRjOTY5NGE2YWY5ZTciLCJpYXQiOjE2NTk0MjYyODEuMDUwODI2LCJuYmYiOjE2NTk0MjYyODEuMDUwODI4LCJleHAiOjE2OTA5NjIyODEuMDQ4NDM3LCJzdWIiOiI0Iiwic2NvcGVzIjpbXX0.UCbF9_s5Z3LO_zq7UdP3ARNz80tMW4INuEuH22aUOjl7pA2I92Kccp-jGoVScPYiX5tsE6FBMO-tz214cKRJyo2JeSfQuvWeIKvaIj34QRnKq6UjqBRWGYTyKBYdYU8613Tq1mdYPHyp1PmLovOEmqZgJQjXECeeA1w7LiqReBKHJFfLZP7ckDaTsjcyppgcQWrqHfL08deA0glGbDd41dfzSkgcYHrV9iGDAFAdZoLteJOVwRI7AtlPQF3MVEsY13IQMiqQbcS6UFHopQGQqeXCKr5uEfk3EHCSy8QkkKauk8MFcerDslU_ZZCUqPiXzofgLj_Z9MBGscPTR83SLIhlV_IC5duiI1gykOSSiloqYh0DwbTlB5r9dvJglTBZpHjW57LQMsgVbR8Lk3fnmtOsO62CskzpdV5SGHxD4XFkCH70eXXwBvmzO7K98VtUpkTGl-55Ngtrb51XqDC2vUoh5TNqYJTiijuXH1fZIedYcV6dk8kYOrBLK-D6ab510C9B8IJ1jifehM6dwMiZ7N5WV61KI8VbwkV66QXnLOIfd4C1sihYrnm9Azt1xLgidpc44JO2YN2eg_uip77imEBgP4HzvUt6N92rjOGP18iVggXWI6U5uyZ7Ov2EkIXJejT8ylZgsx2ilQ2yO--nL5jxyi0JqgWO5fzRkAM6pkk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pages/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pages",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET topics",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiY2ExYmI1ZDE0M2E5ZWFjMzc3MTcyNGFkYjVjMmVmNzRjNjQ0OGJkMDNhMWNlZTJkOGVjZmRkNjdkN2UzMWEyY2FmYWRjOTY5NGE2YWY5ZTciLCJpYXQiOjE2NTk0MjYyODEuMDUwODI2LCJuYmYiOjE2NTk0MjYyODEuMDUwODI4LCJleHAiOjE2OTA5NjIyODEuMDQ4NDM3LCJzdWIiOiI0Iiwic2NvcGVzIjpbXX0.UCbF9_s5Z3LO_zq7UdP3ARNz80tMW4INuEuH22aUOjl7pA2I92Kccp-jGoVScPYiX5tsE6FBMO-tz214cKRJyo2JeSfQuvWeIKvaIj34QRnKq6UjqBRWGYTyKBYdYU8613Tq1mdYPHyp1PmLovOEmqZgJQjXECeeA1w7LiqReBKHJFfLZP7ckDaTsjcyppgcQWrqHfL08deA0glGbDd41dfzSkgcYHrV9iGDAFAdZoLteJOVwRI7AtlPQF3MVEsY13IQMiqQbcS6UFHopQGQqeXCKr5uEfk3EHCSy8QkkKauk8MFcerDslU_ZZCUqPiXzofgLj_Z9MBGscPTR83SLIhlV_IC5duiI1gykOSSiloqYh0DwbTlB5r9dvJglTBZpHjW57LQMsgVbR8Lk3fnmtOsO62CskzpdV5SGHxD4XFkCH70eXXwBvmzO7K98VtUpkTGl-55Ngtrb51XqDC2vUoh5TNqYJTiijuXH1fZIedYcV6dk8kYOrBLK-D6ab510C9B8IJ1jifehM6dwMiZ7N5WV61KI8VbwkV66QXnLOIfd4C1sihYrnm9Azt1xLgidpc44JO2YN2eg_uip77imEBgP4HzvUt6N92rjOGP18iVggXWI6U5uyZ7Ov2EkIXJejT8ylZgsx2ilQ2yO--nL5jxyi0JqgWO5fzRkAM6pkk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/topics",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"topics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST topics",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiY2ExYmI1ZDE0M2E5ZWFjMzc3MTcyNGFkYjVjMmVmNzRjNjQ0OGJkMDNhMWNlZTJkOGVjZmRkNjdkN2UzMWEyY2FmYWRjOTY5NGE2YWY5ZTciLCJpYXQiOjE2NTk0MjYyODEuMDUwODI2LCJuYmYiOjE2NTk0MjYyODEuMDUwODI4LCJleHAiOjE2OTA5NjIyODEuMDQ4NDM3LCJzdWIiOiI0Iiwic2NvcGVzIjpbXX0.UCbF9_s5Z3LO_zq7UdP3ARNz80tMW4INuEuH22aUOjl7pA2I92Kccp-jGoVScPYiX5tsE6FBMO-tz214cKRJyo2JeSfQuvWeIKvaIj34QRnKq6UjqBRWGYTyKBYdYU8613Tq1mdYPHyp1PmLovOEmqZgJQjXECeeA1w7LiqReBKHJFfLZP7ckDaTsjcyppgcQWrqHfL08deA0glGbDd41dfzSkgcYHrV9iGDAFAdZoLteJOVwRI7AtlPQF3MVEsY13IQMiqQbcS6UFHopQGQqeXCKr5uEfk3EHCSy8QkkKauk8MFcerDslU_ZZCUqPiXzofgLj_Z9MBGscPTR83SLIhlV_IC5duiI1gykOSSiloqYh0DwbTlB5r9dvJglTBZpHjW57LQMsgVbR8Lk3fnmtOsO62CskzpdV5SGHxD4XFkCH70eXXwBvmzO7K98VtUpkTGl-55Ngtrb51XqDC2vUoh5TNqYJTiijuXH1fZIedYcV6dk8kYOrBLK-D6ab510C9B8IJ1jifehM6dwMiZ7N5WV61KI8VbwkV66QXnLOIfd4C1sihYrnm9Azt1xLgidpc44JO2YN2eg_uip77imEBgP4HzvUt6N92rjOGP18iVggXWI6U5uyZ7Ov2EkIXJejT8ylZgsx2ilQ2yO--nL5jxyi0JqgWO5fzRkAM6pkk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/topics?project_id=2&name=Water Hosting&active=0",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"topics"
+					],
+					"query": [
+						{
+							"key": "project_id",
+							"value": "2"
+						},
+						{
+							"key": "name",
+							"value": "Water Hosting"
+						},
+						{
+							"key": "active",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT topics",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiY2ExYmI1ZDE0M2E5ZWFjMzc3MTcyNGFkYjVjMmVmNzRjNjQ0OGJkMDNhMWNlZTJkOGVjZmRkNjdkN2UzMWEyY2FmYWRjOTY5NGE2YWY5ZTciLCJpYXQiOjE2NTk0MjYyODEuMDUwODI2LCJuYmYiOjE2NTk0MjYyODEuMDUwODI4LCJleHAiOjE2OTA5NjIyODEuMDQ4NDM3LCJzdWIiOiI0Iiwic2NvcGVzIjpbXX0.UCbF9_s5Z3LO_zq7UdP3ARNz80tMW4INuEuH22aUOjl7pA2I92Kccp-jGoVScPYiX5tsE6FBMO-tz214cKRJyo2JeSfQuvWeIKvaIj34QRnKq6UjqBRWGYTyKBYdYU8613Tq1mdYPHyp1PmLovOEmqZgJQjXECeeA1w7LiqReBKHJFfLZP7ckDaTsjcyppgcQWrqHfL08deA0glGbDd41dfzSkgcYHrV9iGDAFAdZoLteJOVwRI7AtlPQF3MVEsY13IQMiqQbcS6UFHopQGQqeXCKr5uEfk3EHCSy8QkkKauk8MFcerDslU_ZZCUqPiXzofgLj_Z9MBGscPTR83SLIhlV_IC5duiI1gykOSSiloqYh0DwbTlB5r9dvJglTBZpHjW57LQMsgVbR8Lk3fnmtOsO62CskzpdV5SGHxD4XFkCH70eXXwBvmzO7K98VtUpkTGl-55Ngtrb51XqDC2vUoh5TNqYJTiijuXH1fZIedYcV6dk8kYOrBLK-D6ab510C9B8IJ1jifehM6dwMiZ7N5WV61KI8VbwkV66QXnLOIfd4C1sihYrnm9Azt1xLgidpc44JO2YN2eg_uip77imEBgP4HzvUt6N92rjOGP18iVggXWI6U5uyZ7Ov2EkIXJejT8ylZgsx2ilQ2yO--nL5jxyi0JqgWO5fzRkAM6pkk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/topics/46?project_id=2&name=Fire Hosting&active=1&description=",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"topics",
+						"46"
+					],
+					"query": [
+						{
+							"key": "project_id",
+							"value": "2"
+						},
+						{
+							"key": "name",
+							"value": "Fire Hosting"
+						},
+						{
+							"key": "active",
+							"value": "1"
+						},
+						{
+							"key": "description",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DEL topics",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiY2ExYmI1ZDE0M2E5ZWFjMzc3MTcyNGFkYjVjMmVmNzRjNjQ0OGJkMDNhMWNlZTJkOGVjZmRkNjdkN2UzMWEyY2FmYWRjOTY5NGE2YWY5ZTciLCJpYXQiOjE2NTk0MjYyODEuMDUwODI2LCJuYmYiOjE2NTk0MjYyODEuMDUwODI4LCJleHAiOjE2OTA5NjIyODEuMDQ4NDM3LCJzdWIiOiI0Iiwic2NvcGVzIjpbXX0.UCbF9_s5Z3LO_zq7UdP3ARNz80tMW4INuEuH22aUOjl7pA2I92Kccp-jGoVScPYiX5tsE6FBMO-tz214cKRJyo2JeSfQuvWeIKvaIj34QRnKq6UjqBRWGYTyKBYdYU8613Tq1mdYPHyp1PmLovOEmqZgJQjXECeeA1w7LiqReBKHJFfLZP7ckDaTsjcyppgcQWrqHfL08deA0glGbDd41dfzSkgcYHrV9iGDAFAdZoLteJOVwRI7AtlPQF3MVEsY13IQMiqQbcS6UFHopQGQqeXCKr5uEfk3EHCSy8QkkKauk8MFcerDslU_ZZCUqPiXzofgLj_Z9MBGscPTR83SLIhlV_IC5duiI1gykOSSiloqYh0DwbTlB5r9dvJglTBZpHjW57LQMsgVbR8Lk3fnmtOsO62CskzpdV5SGHxD4XFkCH70eXXwBvmzO7K98VtUpkTGl-55Ngtrb51XqDC2vUoh5TNqYJTiijuXH1fZIedYcV6dk8kYOrBLK-D6ab510C9B8IJ1jifehM6dwMiZ7N5WV61KI8VbwkV66QXnLOIfd4C1sihYrnm9Azt1xLgidpc44JO2YN2eg_uip77imEBgP4HzvUt6N92rjOGP18iVggXWI6U5uyZ7Ov2EkIXJejT8ylZgsx2ilQ2yO--nL5jxyi0JqgWO5fzRkAM6pkk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/topics/45",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"topics",
+						"45"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
