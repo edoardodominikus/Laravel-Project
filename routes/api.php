@@ -7,6 +7,8 @@ use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\ProjectController;
 use App\Http\Controllers\Api\PageController;
 use App\Http\Controllers\Api\TopicController;
+use App\Http\Controllers\Api\ArticleController;
+
 
 
 /*
@@ -34,6 +36,8 @@ Route::middleware('auth:api')->group(function () {
     Route::resource('projects', ProjectController::class);
     Route::resource('pages', PageController::class);
     Route::resource('topics', TopicController::class);
+    Route::resource('articles', ArticleController::class);
+
 
 
 });
