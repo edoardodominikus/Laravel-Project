@@ -11,6 +11,8 @@ use App\Http\Controllers\Api\ArticleController;
 use App\Http\Controllers\Api\TechnicalTaskController;
 use App\Http\Controllers\Api\OnpageTaskController;
 use App\Http\Controllers\Api\MonthlyTaskController;
+use App\Http\Controllers\Api\MeetingNoteController;
+
 
 
 
@@ -43,4 +45,5 @@ Route::middleware('auth:api')->group(function () {
     Route::resource('technicaltasks', TechnicalTaskController::class);
     Route::resource('onpagetasks', OnpageTaskController::class);
     Route::resource('monthlytasks', MonthlyTaskController::class);
+    Route::resource('meetingnotes', MeetingNoteController::class);
 });
