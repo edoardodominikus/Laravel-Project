@@ -17,7 +17,12 @@ class PageController extends Controller
      */
     public function index()
     {
-        $pages = Page::all();
+        $pages = DB::table('pages')
+        ->join('projects','pages.project_id','=','projects.id')
+        // ->where('project_id','1')
+        ->select('pages.id','pages.dt_added','project_id','url','page_title','pages.keywords','pages.topics','notes','type','name AS project_name',)
+        ->get();;
+
         return response()->json([
             "success" => true,
             "message" => "Page List",
@@ -26,12 +31,16 @@ class PageController extends Controller
         
     }
     function getProjects()
-    {
-        $projects = DB::table('pages')
-                        ->join('projects','pages.project_id','=','projects.id')
-                        ->select('project_id','name')
-                        ->get();
-        return view('welcome',['projects'=>$projects]);
+    {   
+          
+        return $pages = DB::table('pages')
+                            ->join('projects','pages.project_id','=','projects.id')
+                            // ->where('project_id','1')
+                            ->select('pages.id','pages.dt_added','project_id','url','page_title','pages.keywords','pages.topics','notes','type','name AS project_name',)
+                            ->get();
+        
+        // return $pages;
+        // return view('welcome',['projects'=>$projects]);
     }
     /**
      * Store a newly created resource in storage.
