@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use App\Models\Page;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Validator;
 
 class PageController extends Controller
@@ -22,6 +23,15 @@ class PageController extends Controller
             "message" => "Page List",
             "data" => $pages
         ]);
+        
+    }
+    function getProjects()
+    {
+        $projects = DB::table('pages')
+                        ->join('projects','pages.project_id','=','projects.id')
+                        ->select('project_id','name')
+                        ->get();
+        return view('welcome',['projects'=>$projects]);
     }
     /**
      * Store a newly created resource in storage.
