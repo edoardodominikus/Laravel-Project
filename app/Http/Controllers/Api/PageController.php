@@ -15,13 +15,14 @@ class PageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        $pages = DB::table('pages')
-        ->join('projects','pages.project_id','=','projects.id')
-        // ->where('project_id','1')
-        ->select('pages.id','pages.dt_added','project_id','url','page_title','pages.keywords','pages.topics','notes','type','name AS project_name',)
-        ->get();;
+    public function index(Request $request)
+    {   $project_id=$request->input('project_id');
+        // print_r($project_id);
+        $pages = Page::
+            join('projects','pages.project_id','=','projects.id')
+            ->where('project_id',$project_id)
+            ->select('pages.id','pages.dt_added','project_id','url','page_title','pages.keywords','pages.topics','notes','type','name AS project_name',)
+            ->get();
 
         return response()->json([
             "success" => true,
@@ -33,11 +34,11 @@ class PageController extends Controller
     function getProjects()
     {   
           
-        return $pages = DB::table('pages')
-                            ->join('projects','pages.project_id','=','projects.id')
-                            // ->where('project_id','1')
-                            ->select('pages.id','pages.dt_added','project_id','url','page_title','pages.keywords','pages.topics','notes','type','name AS project_name',)
-                            ->get();
+        return $pages = Page::
+                    join('projects','pages.project_id','=','projects.id')
+                    // ->where('project_id','')
+                    ->select('pages.id','pages.dt_added','project_id','url','page_title','pages.keywords','pages.topics','notes','type','name AS project_name')
+                    ->get();
         
         // return $pages;
         // return view('welcome',['projects'=>$projects]);

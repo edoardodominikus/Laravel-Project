@@ -170,6 +170,9 @@
 		},
 		{
 			"name": "GET pages",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
 				"header": [
@@ -184,8 +187,17 @@
 						"type": "text"
 					}
 				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"project_id\" : 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/pages",
+					"raw": "http://127.0.0.1:8000/api/pages/",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -196,7 +208,8 @@
 					"port": "8000",
 					"path": [
 						"api",
-						"pages"
+						"pages",
+						""
 					]
 				}
 			},
