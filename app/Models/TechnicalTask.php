@@ -4,11 +4,12 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;
+namespace App\Models;
+use Illuminate\Database\Eloquent\Model;
 
-class TechnicalTask extends Authenticatable
+class TechnicalTask extends Model
 {
     use HasApiTokens, HasFactory, Notifiable;
     protected $table = 'technical_tasks';

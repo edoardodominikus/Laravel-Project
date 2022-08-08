@@ -14,6 +14,7 @@ class MeetingNoteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
     public function index()
     {
         $meetingnotes = MeetingNote::all();
