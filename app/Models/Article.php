@@ -6,7 +6,6 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;
-namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 class Article extends Model
@@ -19,6 +18,10 @@ class Article extends Model
      *
      * @var array<int, string>
      */
+
+    public function project(){
+        return $this->belongsTo(Project::class);
+    }
     protected $fillable = [
         'project_id',
         'page_id',

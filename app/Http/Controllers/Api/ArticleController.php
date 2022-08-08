@@ -16,7 +16,8 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles = Article::all();
+        $articles = Article::with('project:id,name')->get();
+        // $projects = $articles->project;
         return response()->json([
             "success" => true,
             "message" => "Article List",
